@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tokyo Ngunyah | Food Content Creator</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:'Poppins',sans-serif;
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+background:#FFFBE8;
+
+color:#333;
+
+overflow-x:hidden;
+
+}
+
+nav{
+
+position:fixed;
+
+top:0;
+
+width:100%;
+
+padding:20px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(255,255,255,.8);
+
+backdrop-filter:blur(12px);
+
+z-index:999;
+
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.logo{
+
+font-size:30px;
+
+font-weight:800;
+
+color:#f2b705;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:35px;
+
+list-style:none;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:#444;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#e0a800;
+
+}
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+flex-direction:column;
+
+padding:20px;
+
+background:linear-gradient(135deg,#FFF9D7,#FFE066);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.hero h1{
+
+font-size:70px;
+
+font-weight:800;
+
+color:#DAA520;
+
+}
+
+.hero p{
+
+margin-top:20px;
+
+font-size:22px;
+
+max-width:700px;
+
+}
+
+.btn{
+
+margin-top:35px;
+
+padding:15px 40px;
+
+background:#F4B400;
+
+border:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+color:white;
+
+transition:.3s;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+background:#DAA520;
+
+}
+
+.sunflower{
+
+position:absolute;
+
+font-size:90px;
+
+animation:float 6s ease-in-out infinite;
+
+opacity:.25;
+
+}
+
+.sun1{
+
+top:80px;
+
+left:60px;
+
+}
+
+.sun2{
+
+bottom:100px;
+
+right:80px;
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0px)}
+
+50%{transform:translateY(-20px)}
+
+100%{transform:translateY(0px)}
+
+}
+
+section{
+
+padding:90px 10%;
+
+}
+
+.title{
+
+text-align:center;
+
+font-size:42px;
+
+color:#DAA520;
+
+margin-bottom:50px;
+
+}
+
+.about{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+align-items:center;
+
+}
+
+.about img{
+
+width:100%;
+
+border-radius:20px;
+
+}
+
+.card-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+.card{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.number{
+
+font-size:45px;
+
+font-weight:800;
+
+color:#F4B400;
+
+}
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+}
+
+.gallery div{
+
+height:250px;
+
+border-radius:20px;
+
+background:#FFD54F;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:70px;
+
+}
+
+.services{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+.service{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.contact{
+
+text-align:center;
+
+}
+
+.contact button{
+
+margin:10px;
+
+}
+
+footer{
+
+background:#F4B400;
+
+padding:30px;
+
+text-align:center;
+
+color:white;
+
+margin-top:60px;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.about{
+
+grid-template-columns:1fr;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">🌻 Tokyo Ngunyah</div>
+
+<ul>
+
+<li><a href="#about">Tentang</a></li>
+
+<li><a href="#portfolio">Portfolio</a></li>
+
+<li><a href="#service">Layanan</a></li>
+
+<li><a href="#contact">Kontak</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="sunflower sun1">🌻</div>
+
+<div class="sunflower sun2">🌻</div>
+
+<h1>TOKYO NGUNYAH</h1>
+
+<p>Food Content Creator yang membagikan pengalaman kuliner terbaik, hidden gem, dan review makanan dengan visual yang menarik.</p>
+
+<button class="btn">Lihat Portfolio</button>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">Tentang Saya</h2>
+
+<div class="about">
+
+<div>
+
+<h3>Halo! 👋</h3>
+
+<br>
+
+<p>
+
+Selamat datang di website resmi Tokyo Ngunyah.
+
+Website ini dibuat sebagai tempat untuk menampilkan karya, video, foto, serta menjadi media kerja sama dengan berbagai brand kuliner.
+
+</p>
+
+</div>
+
+<img src="https://picsum.photos/600/450" alt="">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Statistik</h2>
+
+<div class="card-grid">
+
+<div class="card">
+
+<div class="number">50M+</div>
+
+<p>Total Views</p>
+
+</div>
+
+<div class="card">
+
+<div class="number">500K+</div>
+
+<p>Followers</p>
+
+</div>
+
+<div class="card">
+
+<div class="number">2.5M</div>
+
+<p>Likes</p>
+
+</div>
+
+<div class="card">
+
+<div class="number">300+</div>
+
+<p>Video</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="portfolio">
+
+<h2 class="title">Portfolio</h2>
+
+<div class="gallery">
+
+<div>🍜</div>
+
+<div>🍔</div>
+
+<div>🍣</div>
+
+<div>🍕</div>
+
+<div>🥤</div>
+
+<div>🍟</div>
+
+</div>
+
+</section>
+
+<section id="service">
+
+<h2 class="title">Layanan</h2>
+
+<div class="services">
+
+<div class="service">
+
+<h3>Food Review</h3>
+
+<p>Review makanan profesional.</p>
+
+</div>
+
+<div class="service">
+
+<h3>UGC Content</h3>
+
+<p>Konten untuk kebutuhan promosi brand.</p>
+
+</div>
+
+<div class="service">
+
+<h3>Short Video</h3>
+
+<p>Video TikTok, Reels, dan Shorts.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Hubungi Saya</h2>
+
+<div class="contact">
+
+<button class="btn">TikTok</button>
+
+<button class="btn">Instagram</button>
+
+<button class="btn">WhatsApp</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>🌻 Tokyo Ngunyah</h2>
+
+<p>Every Bite Tells a Story.</p>
+
+<p>© 2026 All Rights Reserved.</p>
+
+</footer>
+
+</body>
+
+</html>
