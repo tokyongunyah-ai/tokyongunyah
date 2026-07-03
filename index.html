@@ -1,386 +1,269 @@
 <!DOCTYPE html>
-
 <html lang="id">
-
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tokyo Ngunyah | Food Content Creator</title>
+<title>PANDOS Coffee & Eatery</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<style>
- 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"><style>
+
 *{
-
 margin:0;
-
 padding:0;
-
 box-sizing:border-box;
-
-font-family:'Poppins',sans-serif;
-
-scroll-behavior:smooth;
-
 }
 
 body{
-
-background:#FFFBE8;
-
-color:#333;
-
+background:#0f0f0f;
+font-family:'Poppins',sans-serif;
+color:white;
 overflow-x:hidden;
-
 }
 
-nav{
-
-position:fixed;
-
-top:0;
-
-width:100%;
-
-padding:20px 8%;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-background:rgba(255,255,255,.8);
-
-backdrop-filter:blur(12px);
-
-z-index:999;
-
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-
-}
-
-.logo{
-
-font-size:30px;
-
-font-weight:800;
-
-color:#f2b705;
-
-}
-
-nav ul{
-
-display:flex;
-
-gap:35px;
-
-list-style:none;
-
-}
-
-nav a{
-
+a{
 text-decoration:none;
-
-color:#444;
-
-font-weight:600;
-
-transition:.3s;
-
+color:white;
 }
 
-nav a:hover{
-
-color:#e0a800;
-
+img{
+width:100%;
+display:block;
 }
+/* HERO */
 
 .hero{
-
-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-text-align:center;
-
-flex-direction:column;
-
-padding:20px;
-
-background:linear-gradient(135deg,#FFF9D7,#FFE066);
-
-position:relative;
-
-overflow:hidden;
-
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
 }
 
-.hero h1{
-
-font-size:70px;
-
-font-weight:800;
-
-color:#DAA520;
-
+.hero-bg{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.hero p{
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.55);
+}
 
-margin-top:20px;
+.hero-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:#fff;
+    width:90%;
+}
 
-font-size:22px;
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
 
-max-width:700px;
-
+.hero-content p{
+    font-size:20px;
+    line-height:1.8;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:35px;
 }
 
 .btn{
-
-margin-top:35px;
-
-padding:15px 40px;
-
-background:#F4B400;
-
-border:none;
-
-border-radius:50px;
-
-font-size:18px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-color:white;
-
-transition:.3s;
-
-box-shadow:0 10px 25px rgba(0,0,0,.15);
-
+    display:inline-block;
+    background:#d4af37;
+    color:#111;
+    padding:15px 40px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
 }
 
 .btn:hover{
-
-transform:translateY(-5px);
-
-background:#DAA520;
-
+    background:#fff;
+    transform:translateY(-3px);
 }
-
-.sunflower{
-
-position:absolute;
-
-font-size:90px;
-
-animation:float 6s ease-in-out infinite;
-
-opacity:.25;
-
-}
-
-.sun1{
-
-top:80px;
-
-left:60px;
-
-}
-
-.sun2{
-
-bottom:100px;
-
-right:80px;
-
-}
-
-@keyframes float{
-
-0%{transform:translateY(0px)}
-
-50%{transform:translateY(-20px)}
-
-100%{transform:translateY(0px)}
-
-}
-
-section{
-
-padding:90px 10%;
-
-}
-
-.title{
-
-text-align:center;
-
-font-size:42px;
-
-color:#DAA520;
-
-margin-bottom:50px;
-
-}
+/* ABOUT */
 
 .about{
+
+padding:120px 8%;
 
 display:grid;
 
 grid-template-columns:1fr 1fr;
 
-gap:40px;
+gap:70px;
 
 align-items:center;
 
-}
-
-.about img{
-
-width:100%;
-
-border-radius:20px;
+background:#151515;
 
 }
 
-.card-grid{
+.about-image img{
+
+border-radius:25px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.5);
+
+transition:.5s;
+
+}
+
+.about-image img:hover{
+
+transform:scale(1.04);
+
+}
+
+.about-text span{
+
+color:#d7b56d;
+
+letter-spacing:4px;
+
+font-size:14px;
+
+}
+
+.about-text h2{
+
+font-size:48px;
+
+margin:15px 0;
+
+font-family:Playfair Display;
+
+}
+<!-- HERO -->
+<section class="hero">
+
+    <img src="assets/bg.jpg" class="hero-bg" alt="Pandos Coffee">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1>PANDOS COFFEE & EATERY</h1>
+        <p>
+            Tempat nongkrong favorit di Arfai dengan suasana cozy,
+            live music, rooftop, dan berbagai pilihan makanan
+            serta minuman terbaik.
+        </p>
+
+        <a href="#menu" class="btn">Lihat Menu</a>
+    </div>
+
+</section><!-- HERO -->
+<section class="hero">
+
+    <img src="assets/bg.jpg" class="hero-bg" alt="Pandos Coffee">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1>PANDOS COFFEE & EATERY</h1>
+        <p>
+            Tempat nongkrong favorit di Arfai dengan suasana cozy,
+            live music, rooftop, dan berbagai pilihan makanan
+            serta minuman terbaik.
+        </p>
+
+        <a href="#menu" class="btn">Lihat Menu</a>
+    </div>
+
+</section><!-- HERO -->
+<section class="hero">
+
+    <img src="assets/bg.jpg" class="hero-bg" alt="Pandos Coffee">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1>PANDOS COFFEE & EATERY</h1>
+        <p>
+            Tempat nongkrong favorit di Arfai dengan suasana cozy,
+            live music, rooftop, dan berbagai pilihan makanan
+            serta minuman terbaik.
+        </p>
+
+        <a href="#menu" class="btn">Lihat Menu</a>
+    </div>
+
+</section>
+
+.about-text p{
+
+line-height:2;
+
+color:#bfbfbf;
+
+margin-bottom:40px;
+
+}
+
+.feature-grid{
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:25px;
-
-}
-
-.card{
-
-background:white;
-
-padding:30px;
-
-border-radius:20px;
-
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-transition:.3s;
-
-}
-
-.card:hover{
-
-transform:translateY(-10px);
-
-}
-
-.number{
-
-font-size:45px;
-
-font-weight:800;
-
-color:#F4B400;
-
-}
-
-.gallery{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(2,1fr);
 
 gap:20px;
 
 }
 
-.gallery div{
+.feature{
 
-height:250px;
+background:#1f1f1f;
 
-border-radius:20px;
+padding:25px;
 
-background:#FFD54F;
+border-radius:18px;
 
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:70px;
+transition:.4s;
 
 }
 
-.services{
+.feature:hover{
 
-display:grid;
+transform:translateY(-10px);
 
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+background:#242424;
 
-gap:25px;
-
-}
-
-.service{
-
-background:white;
-
-padding:30px;
-
-border-radius:20px;
-
-text-align:center;
-
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+box-shadow:0 15px 30px rgba(215,181,109,.15);
 
 }
 
-.contact{
+.feature h3{
 
-text-align:center;
+margin-bottom:10px;
 
-}
-
-.contact button{
-
-margin:10px;
+color:#d7b56d;
 
 }
 
-footer{
+.feature p{
 
-background:#F4B400;
+margin:0;
 
-padding:30px;
-
-text-align:center;
-
-color:white;
-
-margin-top:60px;
+line-height:1.6;
 
 }
 
-@media(max-width:768px){
-
-.hero h1{
-
-font-size:42px;
-
-}
+@media(max-width:900px){
 
 .about{
 
@@ -388,204 +271,334 @@ grid-template-columns:1fr;
 
 }
 
-nav ul{
+.feature-grid{
 
-display:none;
+grid-template-columns:1fr;
+
+}
+
+.about-text h2{
+
+font-size:36px;
 
 }
 
 }
+/* MENU */
 
+.menu{
+
+padding:120px 8%;
+
+background:#101010;
+
+}
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.section-title span{
+
+color:#d7b56d;
+
+letter-spacing:4px;
+
+font-size:14px;
+
+}
+
+.section-title h2{
+
+font-family:'Playfair Display',serif;
+
+font-size:50px;
+
+margin-top:10px;
+
+}
+
+.menu-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+
+gap:35px;
+
+}
+
+.card{
+
+background:#181818;
+
+border-radius:22px;
+
+overflow:hidden;
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 20px 50px rgba(215,181,109,.25);
+
+}
+
+.card img{
+
+width:100%;
+
+height:340px;
+
+object-fit:cover;
+
+}
+
+.content{
+
+padding:25px;
+
+}
+
+.content h3{
+
+color:#d7b56d;
+
+margin-bottom:10px;
+
+font-size:24px;
+
+}
+
+.content p{
+
+color:#cfcfcf;
+
+line-height:1.7;
+
+}
 </style>
 
 </head>
 
-<body>
+<body><!-- ABOUT -->
 
-<nav>
+<section class="about" id="about">
 
-<div class="logo">🌻 Tokyo Ngunyah</div>
+<div class="about-image">
 
-<ul>
+<img src="assets/about.jpg" alt="Pandos Coffee">
 
-<li><a href="#about">Tentang</a></li>
+</div>
 
-<li><a href="#portfolio">Portfolio</a></li>
+<div class="about-text">
 
-<li><a href="#service">Layanan</a></li>
+<span>WELCOME TO PANDOS</span>
 
-<li><a href="#contact">Kontak</a></li>
-
-</ul>
-
-</nav>
-
-<section class="hero">
-
-<div class="sunflower sun1">🌻</div>
-
-<div class="sunflower sun2">🌻</div>
-
-<h1>TOKYO NGUNYAH</h1>
-
-<p>Food Content Creator yang membagikan pengalaman kuliner terbaik, hidden gem, dan review makanan dengan visual yang menarik.</p>
-
-<button class="btn">Lihat Portfolio</button>
-
-</section>
-
-<section id="about">
-
-<h2 class="title">Tentang Saya</h2>
-
-<div class="about">
-
-<div>
-
-<h3>Halo! 👋</h3>
-
-<br>
+<h2>Tempat Nongkrong Favorit di Arfai</h2>
 
 <p>
 
-Selamat datang di website resmi Tokyo Ngunyah.
+Pandos Coffee & Eatery menghadirkan suasana nyaman
+untuk menikmati kopi, minuman signature, dan
+berbagai pilihan makanan favorit.
 
-Website ini dibuat sebagai tempat untuk menampilkan karya, video, foto, serta menjadi media kerja sama dengan berbagai brand kuliner.
+Dengan konsep modern serta pelayanan yang ramah,
+Pandos menjadi tempat yang cocok untuk berkumpul,
+bekerja, maupun menikmati waktu santai bersama
+teman dan keluarga.
 
 </p>
 
+<div class="feature-grid">
+
+<div class="feature">
+
+<h3>☕ Premium Coffee</h3>
+
+<p>Kopi pilihan dengan cita rasa terbaik.</p>
+
 </div>
 
-<img src="https://picsum.photos/600/450" alt="">
+<div class="feature">
+
+<h3>🍔 Fresh Food</h3>
+
+<p>Makanan dibuat fresh setiap hari.</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🌿 Cozy Place</h3>
+
+<p>Tempat nyaman untuk nongkrong.</p>
+
+</div>
+
+<div class="feature">
+
+<h3>📸 Instagramable</h3>
+
+<p>Banyak spot foto yang menarik.</p>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
+<!-- MENU -->
 
-<section>
+<section class="menu" id="menu">
 
-<h2 class="title">Statistik</h2>
+<div class="section-title">
+<span>OUR SIGNATURE</span>
+<h2>Best Seller Menu</h2>
+</div>
 
-<div class="card-grid">
+<div class="menu-grid">
 
 <div class="card">
-
-<div class="number">50M+</div>
-
-<p>Total Views</p>
-
+<img src="IMG_8186.jpeg">
+<div class="content">
+<h3>Milo Matchazilla</h3>
+<p>Perpaduan matcha premium, susu creamy, dan milo yang melimpah.</p>
+</div>
 </div>
 
 <div class="card">
-
-<div class="number">500K+</div>
-
-<p>Followers</p>
-
+<img src="assets/cookies.jpg">
+<div class="content">
+<h3>Cookies & Cream</h3>
+<p>Minuman creamy dengan oreo crumble yang lembut.</p>
+</div>
 </div>
 
 <div class="card">
-
-<div class="number">2.5M</div>
-
-<p>Likes</p>
-
+<img src="assets/goguma.jpg">
+<div class="content">
+<h3>Goguma Matcha</h3>
+<p>Perpaduan manis goguma dan matcha premium.</p>
+</div>
 </div>
 
 <div class="card">
+<img src="assets/regal.jpg">
+<div class="content">
+<h3>Creamy Regal Caramel</h3>
+<p>Caramel lembut dipadukan biskuit regal yang crunchy.</p>
+</div>
+</div>
 
-<div class="number">300+</div>
+</div>
+</section>
+<!-- FOOD MENU -->
 
-<p>Video</p>
+<section class="food" id="food">
+
+<div class="section-title">
+
+<span>OUR FOOD</span>
+
+<h2>Favorite Food</h2>
+
+</div>
+
+<div class="food-grid">
+
+<div class="food-card">
+
+<img src="assets/sandwich.jpg">
+
+<h3>Chicken Sandwich</h3>
+
+<p>Roti panggang dengan ayam crispy, sayuran segar, dan telur.</p>
+
+</div>
+
+<div class="food-card">
+
+<img src="assets/sate.jpg">
+
+<h3>Sate Ayam</h3>
+
+<p>Sate ayam bakar dengan sambal khas Pandos.</p>
+
+</div>
+
+<div class="food-card">
+
+<img src="assets/ricebowl.jpg">
+
+<h3>Chicken Rice Bowl</h3>
+
+<p>Rice bowl ayam pedas lengkap dengan telur.</p>
+
+</div>
+
+<div class="food-card">
+
+<img src="assets/nasgor.jpg">
+
+<h3>Nasi Goreng</h3>
+
+<p>Nasi goreng spesial dengan topping lengkap.</p>
 
 </div>
 
 </div>
 
 </section>
+<section class="about" id="about">
 
-<section id="portfolio">
+<div class="about-image">
+<img src="assets/about.jpg" alt="Cafe Pandos">
+</div>
 
-<h2 class="title">Portfolio</h2>
+<div class="about-content">
 
-<div class="gallery">
+<span>TENTANG PANDOS</span>
 
-<div>🍜</div>
+<h2>Tempat Nongkrong Favorit di Arfai 1</h2>
 
-<div>🍔</div>
+<p>
+Pandos Coffee & Eatery hadir sebagai tempat nongkrong yang nyaman dengan
+suasana modern, pilihan menu makanan yang lezat, serta minuman premium
+yang dibuat dari bahan berkualitas.
+</p>
 
-<div>🍣</div>
+<p>
+Mulai dari kopi gula aren, matcha, hingga rice bowl dan aneka snack,
+semuanya disajikan dengan cita rasa terbaik untuk menemani waktu santai,
+kerja, maupun berkumpul bersama teman dan keluarga.
+</p>
 
-<div>🍕</div>
+<div class="about-info">
 
-<div>🥤</div>
+<div>
+<h3>📍 Lokasi</h3>
+<p>Arfai 1, Pantai Dosa</p>
+</div>
 
-<div>🍟</div>
+<div>
+<h3>📞 Kontak</h3>
+<p>08124867639</p>
+</div>
+
+</div>
+
+<a href="#menu" class="btn">Lihat Menu</a>
 
 </div>
 
 </section>
-
-<section id="service">
-
-<h2 class="title">Layanan</h2>
-
-<div class="services">
-
-<div class="service">
-
-<h3>Food Review</h3>
-
-<p>Review makanan profesional.</p>
-
-</div>
-
-<div class="service">
-
-<h3>UGC Content</h3>
-
-<p>Konten untuk kebutuhan promosi brand.</p>
-
-</div>
-
-<div class="service">
-
-<h3>Short Video</h3>
-
-<p>Video TikTok, Reels, dan Shorts.</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2 class="title">Hubungi Saya</h2>
-
-<div class="contact">
-
-<button class="btn">TikTok</button>
-
-<button class="btn">Instagram</button>
-
-<button class="btn">WhatsApp</button>
-
-</div>
-
-</section>
-
-<footer>
-
-<h2>🌻 Tokyo Ngunyah</h2>
-
-<p>Every Bite Tells a Story.</p>
-
-<p>© 2026 All Rights Reserved.</p>
-
-</footer>
-
-</body>
-
-</html>
